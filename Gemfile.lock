@@ -249,9 +249,10 @@ GEM
     mini_racer (0.13.0)
       libv8-node (~> 22.5.1.0)
     minitest (5.25.0)
-    mission_control-jobs (0.2.1)
+    mission_control-jobs (0.3.0)
       importmap-rails
-      rails (~> 7.1)
+      irb (~> 1.13)
+      rails (>= 7.1)
       stimulus-rails
       turbo-rails
     mobility (1.2.9)
