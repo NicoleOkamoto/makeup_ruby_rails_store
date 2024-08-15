@@ -211,6 +211,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (7.0.0)
       railties (>= 3.2.16)
+    json (2.7.2)
     jsonapi-serializer (2.2.0)
       activesupport (>= 4.2)
     kaminari (1.2.2)
@@ -561,6 +562,7 @@ DEPENDENCIES
   image_processing (~> 1.13)
   importmap-rails
   jbuilder
+  json
   mini_racer
   mission_control-jobs
   pg (~> 1.5)
