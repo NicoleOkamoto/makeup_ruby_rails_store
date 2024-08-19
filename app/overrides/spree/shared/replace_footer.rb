@@ -47,7 +47,8 @@ Deface::Override.new(
            <div class="row mb-2 pb-1">
             <div class="col text-center">
             <a class="text-white" href="https://github.com/NicoleOkamoto">©2024 NicoleOkamoto</a>
-            </div>
+
+                        </div>
           </div>
         </div>
       </footer>
