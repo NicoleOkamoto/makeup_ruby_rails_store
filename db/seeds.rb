@@ -44,7 +44,7 @@ response = Net::HTTP.get(uri)
 products = JSON.parse(response)
 
 # Define the number of products to seed
-products_to_seed = products.first(350)
+products_to_seed = products.first(400)
 
 # Create or find taxonomies
 category_taxonomy = Spree::Taxonomy.find_or_initialize_by(name: 'Categories')
