@@ -85,6 +85,8 @@ gem "spree_gateway"
 gem "spree_i18n"
 gem 'ruby-lsp'
 gem 'deface'
+gem 'font-awesome-sass', '~> 6.0'
+
 
 
 # only needed for MacOS and Ruby 3.0
