@@ -7,20 +7,20 @@ require 'open-uri'
 # Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
 
 # Ensure the store with ID 1 exists
-store = Spree::Store.find_by(id: 1)
+store = Spree::Store.find_by(id: 7)
 unless store
   puts "Store with ID 1 not found. Please create or verify the store."
   exit
 end
 
 # Find or create tax categories and shipping categories
-tax_category = Spree::TaxCategory.find_by(id: 2)
+tax_category = Spree::TaxCategory.find_by(id: 3)
 unless tax_category
   puts "Tax Category with ID 2 not found. Please create or verify the tax category."
   exit
 end
 
-shipping_category = Spree::ShippingCategory.find_by(id: 1)
+shipping_category = Spree::ShippingCategory.find_by(id: 3)
 unless shipping_category
   puts "Shipping Category with ID 1 not found. Please create or verify the shipping category."
   exit
