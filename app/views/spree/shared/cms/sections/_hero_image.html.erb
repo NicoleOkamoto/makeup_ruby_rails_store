@@ -12,29 +12,26 @@
   <div class="bg-light" style="--aspect-ratio:12/5;">
     <% if section.image_one&.attachment&.attached? %>
 
-        <!-- SM to MD -->
-        <img class="d-block d-md-none lazyload"
-          data-src="<%= main_app.cdn_image_url(section.img_one_sm) %>"
-          data-srcset="<%= main_app.cdn_image_url(section.img_one_sm) %>"
-          alt="<%= section&.title %>">
+      <img class="d-block d-md-none lazyload"
+        src="<%= asset_path('homepage/Hero-SM-MD.png') %>"
+        data-srcset="<%= asset_path('homepage/Hero-SM-MD.png') %>"
+        alt="Hero Small Image">
 
-        <!-- MD to LG -->
-        <img class="d-none d-md-block d-lg-none lazyload"
-          data-src="<%= main_app.cdn_image_url(section.img_one_md) %>"
-          data-srcset="<%= main_app.cdn_image_url(section.img_one_md) %>"
-          alt="<%= section&.title %>">
+      <img class="d-none d-md-block d-lg-none lazyload"
+        src="<%= asset_path('homepage/Hero-MD-LG.png') %>"
+        data-srcset="<%= asset_path('homepage/Hero-MD-LG.png') %>"
+        alt="Hero Medium Image">
 
-        <!-- LG to XL -->
-        <img class="d-none d-lg-block d-xl-none lazyload"
-          data-src="<%= main_app.cdn_image_url(section.img_one_lg) %>"
-          data-srcset="<%= main_app.cdn_image_url(section.img_one_lg) %>"
-          alt="<%= section&.title %>">
+      <img class="d-none d-lg-block d-xl-none lazyload"
+        src="<%= asset_path('homepage/Hero-LG-UP.jpg') %>"
+        data-srcset="<%= asset_path('homepage/Hero-LG-UP.jpg') %>"
+        alt="Hero Large Image">
 
-        <!-- XL UP -->
-        <img class="d-none d-xl-block lazyload"
-          data-src="<%= main_app.cdn_image_url(section.img_one_xl) %>"
-          data-srcset="<%= main_app.cdn_image_url(section.img_one_xl) %>"
-          alt="<%= section&.title %>">
+      <img class="d-none d-xl-block lazyload"
+        src="<%= asset_path('homepage/Hero-LG-UP.jpg') %>"
+        data-srcset="<%= asset_path('homepage/Hero-LG-UP.jpg') %>"
+        alt="Hero X-Large Image">
+    </div>
 
      <% else %>
        <%= icon( name: 'card-image',
