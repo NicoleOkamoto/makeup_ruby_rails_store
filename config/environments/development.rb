@@ -76,4 +76,19 @@ config.active_storage.variant_processor = :vips
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.mailgun.org',
+    port: 587,
+    domain: 'sandbox6af8478f039b4a698cab5ca596a10229.mailgun.org', # Free Domain Mailgun
+    user_name: 'postmaster@sandbox6af8478f039b4a698cab5ca596a10229.mailgun.org', # Mailgun SMTP login
+    password: 'f3e6dbf68f1b7c201caae22f1e919199-2b91eb47-4dce3c50', # Mailgun SMTP password
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
+
+  # e24ed12897468ae42e205484f9f37878-2b91eb47-e8b4376d
+
+  config.action_mailer.default_url_options = { host: 'sandbox6af8478f039b4a698cab5ca596a10229.mailgun.org' }
 end
