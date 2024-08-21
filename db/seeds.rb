@@ -6,14 +6,14 @@ require 'open-uri'
 # Spree::Core::Engine.load_seed if defined?(Spree::Core)
 # Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
 
-# Ensure the store with ID 1 exists
+# Ensure the store with ID 1 existis
 store = Spree::Store.find_by(id: 7)
 unless store
   puts "Store with ID 1 not found. Please create or verify the store."
   exit
 end
 
-# Find or create tax categories and shipping categories
+# Find or create tax categories and shipping categoryes
 tax_category = Spree::TaxCategory.find_by(id: 3)
 unless tax_category
   puts "Tax Category with ID 2 not found. Please create or verify the tax category."
@@ -126,7 +126,7 @@ products_to_seed.each do |product_data|
   if spree_product.persisted?
     puts "Created/Updated product #{spree_product.name}"
 
-    # Associate product with store
+    # Associate product with stor
     store_product = Spree::StoreProduct.find_or_initialize_by(store: store, product: spree_product)
     if store_product.save
       puts "Successfully associated product #{spree_product.name} with store #{store.name}"
@@ -137,7 +137,7 @@ products_to_seed.each do |product_data|
     # Set inventory quantity for the product
     variant = spree_product.master
     stock_item = stock_location.stock_items.find_or_initialize_by(variant: variant)
-    stock_item.set_count_on_hand(100) # Set the quantity here
+    stock_item.set_count_on_hand(100) # Set the quantitiy here
     stock_item.save!
     puts "Set inventory quantity for product #{spree_product.name} to 100"
 
@@ -151,7 +151,6 @@ products_to_seed.each do |product_data|
       image_url = "https:#{image_url}"
     end
 
-    # Debugging print
     puts "Attempting to download image from: #{image_url}"
 
     begin
