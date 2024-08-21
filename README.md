@@ -14,11 +14,11 @@ Welcome to the ELEVE Makeup application! This Ruby on Rails application is desig
 
 ### Web View
 
-![Web View](images/web-view.png)
+![Web View](app/assets/images/web-view.png)
 
 ### Mobile View
 
-![Mobile View](images/mobile-view.png)
+![Mobile View](app/assets/images/mobile-view.png)
 
 ## Getting Started
 
