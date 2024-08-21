@@ -45,37 +45,33 @@ Welcome to the ELEVE Makeup application! This Ruby on Rails application is desig
 
 3. **Run Database Migrations**
 
-  Execute database migrations:
+   Execute database migrations:
 
-  ```bash
-  Copy code
-  docker-compose run web rails db:migrate
+   ```bash
+   docker-compose run web rails db:migrate
 
 4. **Seed the Database**
 
-  Load initial data:
+   Load initial data:
 
-  ```bash
-  Copy code
-  docker-compose run web rails db:seed
+    ```bash
+    docker-compose run web rails db:seed
 
 5. **Import the Backup**
 
-  Import a database backup (ensure the backup file is correctly located):
+   Import a database backup (ensure the backup file is correctly located):
 
-  ```bash
-  Copy code
-  docker-compose run web rails db:restore
+   ```bash
+   docker-compose run web rails db:restore
 
 6. **Start the Rails Server**
 
-  Start the server and access the application:
+   Start the server and access the application:
 
-  ```bash
-  Copy code
-  docker-compose up
+    ```bash
+    docker-compose up
 
-  Visit http://localhost:3000 in your browser.
+Visit http://localhost:3000 in your browser.
 
 ### Configuration
 
