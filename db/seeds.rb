@@ -44,7 +44,7 @@ response = Net::HTTP.get(uri)
 products = JSON.parse(response)
 
 # Define the number of products to seed
-products_to_seed = products.first(400)
+products_to_seed = products.first(20)
 
 # Create or find taxonomies
 category_taxonomy = Spree::Taxonomy.find_or_initialize_by(name: 'Categories')
@@ -172,69 +172,6 @@ products_to_seed.each do |product_data|
     puts "Failed to create/update product #{spree_product.name}: #{spree_product.errors.full_messages.join(', ')}"
   end
 end
-
-
-
-# require 'net/http'
-# require 'json'
-# require 'open-uri'
-
-
-
-# # Fetch data from Makeup API
-# url = 'https://makeup-api.herokuapp.com/api/v1/products.json'
-# uri = URI(url)
-# response = Net::HTTP.get(uri)
-# products = JSON.parse(response)
-
-# store = Spree::Store.find(1)
-# if store.nil?
-#   puts "Store with ID 1 not found"
-#   exit
-# end
-
-# shipping_category = Spree::ShippingCategory.find_by(id: 1) || Spree::ShippingCategory.create(name: "Default Shipping Category")
-# tax_category = Spree::TaxCategory.find_by(id: 1) || Spree::TaxCategory.create(name: "Default Tax Category")
-
-# products_to_seed = products.first(10)
-
-
-# # Loop through each product and create it in Spree
-# products_to_seed.each do |product|
-#   spree_product = Spree::Product.new(
-#     name: product['name'],
-#     description: product['description'],
-#     price: product['price'],
-#     available_on: Time.now,
-#     slug: product['name'].parameterize,
-#     currency: 'CAD',
-#     tax_category_id: tax_category.id,
-#     shipping_category_id: shipping_category.id,
-#     promotionable: true,
-#     status: "active",
-
-
-#   )
-
-
-#   # Attempt to save the product and check for errors
-#   if spree_product.save
-#     puts "Created product: #{spree_product.name}"
-
-#     # Add image if available
-#     if product['image_link'].present?
-#       spree_image = spree_product.images.new
-#       spree_image.attachment.attach(io: URI.open(product['image_link']), filename: "#{spree_product.slug}.jpg")
-#       spree_image.save
-#     end
-#   else
-#     puts "Failed to create product: #{spree_product.name}"
-#     spree_product.errors.full_messages.each do |error|
-#       puts "  Error: #{error}"
-#     end
-#   end
-# end
-
 
 # {
 #   "data": {
