@@ -1,0 +1,14 @@
+.forgot-password {
+  margin-top: font-px-to-rem(10px);
+
+  a {
+    transition: basic-transition(color);
+    text-decoration: underline;
+    color: theme-color('info');
+
+    &:hover,
+    &:active {
+      color: theme-color('primary');
+    }
+  }
+}

@@ -89,10 +89,8 @@ gem "spree_i18n"
 gem 'ruby-lsp'
 gem 'deface'
 gem 'font-awesome-sass', '~> 6.0'
-
-
-
-# only needed for MacOS and Ruby 3.0
 gem 'sassc', github: 'sass/sassc-ruby', branch: 'master'
 
 gem 'json'
+
+gem 'mailgun-ruby', '~>1.2.6'
