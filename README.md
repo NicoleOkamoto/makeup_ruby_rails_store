@@ -36,40 +36,33 @@ Welcome to the ELEVE Makeup application! This Ruby on Rails application is desig
    git clone https://github.com/NicoleOkamoto/makeup_ruby_rails_store
    cd makeup_ruby_rails_store
 
-2. **Set Up Docker**
+2. **Run Setup Command**
 
    Build and start the Docker containers:
 
    ```bash
-   docker-compose up --build
-
-3. **Run Database Migrations**
-
-   Execute database migrations:
-
-   ```bash
-   docker-compose run web rails db:migrate
+   bin/setup
 
 4. **Seed the Database**
 
    Load initial data:
 
     ```bash
-    docker-compose run web rails db:seed
+    rails db:seed
 
 5. **Import the Backup**
 
-   Import a database backup (ensure the backup file is correctly located):
+   Import a database backup:
 
    ```bash
-   docker-compose run web rails db:restore
+    pg_restore -U postgres -h localhost -p 5432 -d spree_starter_development -F c -v db/backups/eleve_backup.dump
 
 6. **Start the Rails Server**
 
    Start the server and access the application:
 
     ```bash
-    docker-compose up
+    bin/rails server
 
 Visit http://localhost:3000 in your browser.
 
