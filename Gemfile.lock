@@ -243,11 +243,10 @@ GEM
       kaminari
       rails
     language_server-protocol (3.17.0.3)
-    libv8-node (22.5.1.0)
-    libv8-node (22.5.1.0-aarch64-linux)
-    libv8-node (22.5.1.0-arm64-darwin)
-    libv8-node (22.5.1.0-x86_64-darwin)
-    libv8-node (22.5.1.0-x86_64-linux)
+    libv8-node (22.7.0.3)
+    libv8-node (22.7.0.3-aarch64-linux)
+    libv8-node (22.7.0.3-arm64-darwin)
+    libv8-node (22.7.0.3-x86_64-linux)
     logger (1.6.0)
     loofah (2.22.0)
       crass (~> 1.0.2)
@@ -266,8 +265,8 @@ GEM
     mime-types-data (3.2024.0820)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
-    mini_racer (0.13.0)
-      libv8-node (~> 22.5.1.0)
+    mini_racer (0.15.0)
+      libv8-node (~> 22.7.0.1)
     minitest (5.25.1)
     mission_control-jobs (0.3.1)
       importmap-rails
